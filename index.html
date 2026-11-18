@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RigRadar – Les meilleures offres PC, repérées pour vous</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f8;--surf:#fff;--ink:#0e1b2c;--mute:#5a6779;--line:#d9dfe8;--blue:#1f5bff;--onblue:#fff;--amber:#ffb020;--mint:#0a8f6c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a121e;--surf:#111d2e;--ink:#eaf0f8;--mute:#93a1b5;--line:#233248;--blue:#5b8aff;--onblue:#07101c;--mint:#2fd1a0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a121e;--surf:#111d2e;--ink:#eaf0f8;--mute:#93a1b5;--line:#233248;--blue:#5b8aff;--onblue:#07101c;--mint:#2fd1a0;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surf);border-bottom:1px solid var(--line)}
+.bar{max-width:1040px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:8px}
+.dot{width:14px;height:14px;border-radius:50%;border:3px solid var(--blue);position:relative}
+.dot::after{content:"";position:absolute;inset:2px;background:var(--amber);border-radius:50%}
+nav{display:flex;gap:4px;margin-left:auto}
+nav a{color:var(--mute);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+nav a.on,nav a:hover{color:var(--ink);background:var(--bg)}
+nav a:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.cart{position:relative}.cnt{background:var(--amber);color:#0e1b2c;border-radius:99px;font-size:12px;padding:1px 7px;margin-left:4px;font-weight:800}
+main{max-width:1040px;margin:auto;padding:28px 20px 60px}
+.view{display:none}.view.on{display:block}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.02;letter-spacing:-.03em;margin:0 0 16px;font-weight:800}
+h2{font-size:28px;letter-spacing:-.02em;margin:0 0 16px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:12px 0 36px}
+.hero p{color:var(--mute);font-size:18px;max-width:46ch}
+.btn{display:inline-block;background:var(--blue);color:var(--onblue);border:0;border-radius:10px;padding:12px 20px;font:600 16px inherit;font-family:inherit;cursor:pointer;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.deal{background:var(--surf);border:2px solid var(--blue);border-radius:18px;padding:22px}
+.tag{display:inline-block;background:var(--amber);color:#0e1b2c;font-weight:800;border-radius:6px;padding:2px 10px;font-size:14px}
+.big{font-size:44px;font-weight:800;letter-spacing:-.03em;margin:6px 0}
+.old{color:var(--mute);text-decoration:line-through;font-size:18px;margin-left:8px;font-weight:400}
+.save{color:var(--mint);font-weight:700}
+.pic{height:130px;border-radius:12px;background:linear-gradient(135deg,var(--bg),var(--line));display:grid;place-items:center;font-size:54px;margin-bottom:12px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.steps div{border-top:3px solid var(--blue);padding-top:10px}.steps b{display:block}.steps span{color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column}
+.card h3{margin:0 0 4px;font-size:18px}.card small{color:var(--mute)}
+.price{font-size:26px;font-weight:800;margin:8px 0 2px}
+.card .row{margin-top:auto;display:flex;gap:8px;padding-top:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters button{background:var(--surf);color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font:600 14px inherit;font-family:inherit;cursor:pointer}
+.filters button.on{background:var(--ink);color:var(--bg)}
+.line{display:flex;gap:14px;align-items:center;background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+.line .nm{flex:1;min-width:0}.line button.x{background:none;border:0;color:var(--mute);font-size:22px;cursor:pointer}
+.tot{display:flex;justify-content:space-between;font-size:22px;font-weight:800;margin:18px 0}
+form{display:grid;gap:12px;max-width:520px}
+label{font-weight:600;display:grid;gap:4px}
+input,textarea{font:inherit;background:var(--surf);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+.note{color:var(--mute);font-size:14px;margin-top:18px}
+footer{border-top:1px solid var(--line);color:var(--mute);font-size:14px;text-align:center;padding:20px}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.on{opacity:1}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.steps{grid-template-columns:1fr}nav{margin-left:0;width:100%;overflow-x:auto}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#accueil"><span class="dot"></span>RigRadar</a>
+<nav id="nav">
+<a href="#accueil" data-v="accueil">Accueil</a>
+<a href="#produits" data-v="produits">Produits</a>
+<a href="#contact" data-v="contact">Contact</a>
+<a href="#panier" data-v="panier" class="cart">🛒 Panier<span class="cnt" id="cnt">0</span></a>
+</nav></div></header>
+
+<main>
+<section class="view" id="v-accueil">
+<div class="hero">
+<div>
+<h1>Le bon PC, au bon prix. Déjà repéré pour vous.</h1>
+<p>RigRadar compare les offres des grands sites et garde la meilleure. Vous gagnez du temps, nous prenons une petite commission fixe.</p>
+<a class="btn" href="#produits">Voir tous les PC</a>
+</div>
+<div class="deal" id="dealbox"></div>
+</div>
+<h2>Comment ça marche</h2>
+<div class="steps">
+<div><b>Nous scannons</b><span>Les prix des principaux sites tous les jours.</span></div>
+<div><b>Nous gardons la meilleure offre</b><span>Un seul prix affiché, commission incluse.</span></div>
+<div><b>Vous choisissez</b><span>Vous ajoutez au panier, nous vous guidons jusqu’à l’achat.</span></div>
+</div>
+</section>
+
+<section class="view" id="v-produits">
+<h2>Tous les PC</h2>
+<div class="filters" id="filters"></div>
+<div class="grid" id="grid"></div>
+<p class="note">Exemples de produits et de prix à remplacer par vos vraies offres.</p>
+</section>
+
+<section class="view" id="v-panier">
+<h2>Votre panier</h2>
+<div id="lines"></div>
+<div class="tot"><span>Total</span><span id="total">0 €</span></div>
+<button class="btn" id="checkout">Valider ma commande</button>
+<button class="btn alt" id="clear">Vider le panier</button>
+<p class="note">Le paiement n’est pas encore branché : ce bouton affiche un message de démonstration.</p>
+</section>
+
+<section class="view" id="v-contact">
+<h2>Nous contacter</h2>
+<form id="cform">
+<label>Votre nom<input name="n" required autocomplete="name"></label>
+<label>Votre e-mail<input name="e" type="email" required autocomplete="email"></label>
+<label>Votre message<textarea name="m" rows="5" required></textarea></label>
+<button class="btn" type="submit">Envoyer le message</button>
+</form>
+<p class="note">Le bouton ouvre votre application e-mail. Remplacez <b>contact@rigradar.fr</b> par votre vraie adresse dans le code.</p>
+</section>
+</main>
+<footer>© 2026 RigRadar · Mentions légales · CGV · Politique de confidentialité (à compléter)</footer>
+<div id="toast" role="status"></div>
+
+<script>
+var P=[
+{id:1,n:"Nitro Tower R5",c:"Gaming",s:"RTX 4060 · Ryzen 5 · 16 Go · 1 To",p:749,a:849,m:"Boutique A",e:"🖥️"},
+{id:2,n:"Slim Office i5",c:"Bureautique",s:"Intel i5 · 16 Go · SSD 512 Go",p:419,a:489,m:"Boutique B",e:"💻"},
+{id:3,n:"Creator Pro 7",c:"Création",s:"RTX 4070 · Ryzen 7 · 32 Go · 2 To",p:1289,a:1429,m:"Boutique C",e:"🖥️"},
+{id:4,n:"AirBook 14",c:"Portable",s:"Ryzen 5 · 16 Go · SSD 512 Go · 14″",p:579,a:649,m:"Boutique A",e:"💻"},
+{id:5,n:"Arena Laptop 16",c:"Gaming",s:"RTX 4060 · i7 · 16 Go · 16″ 165 Hz",p:999,a:1149,m:"Boutique D",e:"🎮"},
+{id:6,n:"Mini Cube N100",c:"Bureautique",s:"Mini PC · 8 Go · SSD 256 Go",p:189,a:229,m:"Boutique B",e:"📦"}];
+var cart=[],cat="Tous",V=["accueil","produits","panier","contact"];
+try{cart=JSON.parse(localStorage.getItem("rr")||"[]")||[]}catch(e){cart=[]}
+function $(i){return document.getElementById(i)}
+function eur(x){return x.toLocaleString("fr-FR")+" €"}
+function save(){try{localStorage.setItem("rr",JSON.stringify(cart))}catch(e){}}
+function toast(t){var o=$("toast");o.textContent=t;o.className="on";setTimeout(function(){o.className=""},1800)}
+function add(id){cart.push(id);save();draw();toast("Ajouté au panier")}
+function card(x){return '<div class="card"><div class="pic">'+x.e+'</div><small>'+x.c+' · '+x.m+'</small><h3>'+x.n+'</h3><small>'+x.s+'</small><div class="price">'+eur(x.p)+' <span class="old">'+eur(x.a)+'</span></div><div class="save">−'+eur(x.a-x.p)+' vs prix moyen</div><div class="row"><button class="btn" onclick="add('+x.id+')">Ajouter</button></div></div>'}
+function draw(){
+var d=P[4];
+$("dealbox").innerHTML='<span class="tag">Offre du moment</span><div class="pic" style="margin-top:12px">'+d.e+'</div><h3 style="margin:0">'+d.n+'</h3><small>'+d.s+'</small><div class="big">'+eur(d.p)+'<span class="old">'+eur(d.a)+'</span></div><div class="save">Vous économisez '+eur(d.a-d.p)+'</div><p style="margin:12px 0"><button class="btn" onclick="add('+d.id+')">Ajouter au panier</button></p>';
+var cs=["Tous"].concat(P.map(function(x){return x.c}).filter(function(v,i,a){return a.indexOf(v)===i}));
+$("filters").innerHTML=cs.map(function(c){return '<button class="'+(c===cat?"on":"")+'" onclick="cat=\''+c+'\';draw()">'+c+'</button>'}).join("");
+$("grid").innerHTML=P.filter(function(x){return cat==="Tous"||x.c===cat}).map(card).join("");
+$("cnt").textContent=cart.length;
+var t=0;
+$("lines").innerHTML=cart.length?cart.map(function(id,i){var x=P.filter(function(y){return y.id===id})[0];t+=x.p;return '<div class="line"><span style="font-size:30px">'+x.e+'</span><div class="nm"><b>'+x.n+'</b><br><small>'+x.m+'</small></div><b>'+eur(x.p)+'</b><button class="x" aria-label="Retirer" onclick="cart.splice('+i+',1);save();draw()">×</button></div>'}).join(""):'<p>Votre panier est vide. <a href="#produits">Parcourir les PC</a></p>';
+$("total").textContent=eur(t)}
+function route(){var h=(location.hash||"#accueil").slice(1);if(V.indexOf(h)<0)h="accueil";
+V.forEach(function(v){$("v-"+v).className="view"+(v===h?" on":"")});
+document.querySelectorAll("#nav a").forEach(function(a){a.className=(a.dataset.v===h?"on ":"")+(a.dataset.v==="panier"?"cart":"")});scrollTo(0,0)}
+window.addEventListener("hashchange",route);
+$("clear").onclick=function(){cart=[];save();draw()};
+$("checkout").onclick=function(){toast(cart.length?"Démo : le paiement sera branché bientôt":"Le panier est vide")};
+$("cform").onsubmit=function(ev){ev.preventDefault();var f=ev.target;
+location.href="mailto:contact@rigradar.fr?subject="+encodeURIComponent("Message de "+f.n.value)+"&body="+encodeURIComponent(f.m.value+"\n\n"+f.e.value);toast("Ouverture de votre messagerie…")};
+draw();route();
+</script>
+</body>
+</html>
